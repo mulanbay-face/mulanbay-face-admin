@@ -1,0 +1,96 @@
+{
+  "name": "mulanbay",
+  "version": "3.0.0",
+  "description": "木兰湾管理系统",
+  "author": "牧羊人",
+  "scripts": {
+    "test:unit": "jest --clearCache && vue-cli-service test:unit",
+    "lint": "eslint --ext .js,.vue src",
+    "build:prod": "vue-cli-service build",
+    "build:stage": "vue-cli-service build --mode staging",
+    "dev": "vue-cli-service serve",
+    "new": "plop",
+    "preview": "node build/index.js --preview",
+    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
+    "test:ci": "npm run lint && npm run test:unit"
+  },
+  "dependencies": {
+    "@form-create/element-ui": "2.5.1",
+    "@riophae/vue-treeselect": "0.4.0",
+    "echarts": "5.0.1",
+    "moment": "2.27.0",
+    "normalize.css": "7.0.0",
+    "path-to-regexp": "2.4.0",
+    "axios": "0.21.0",
+    "clipboard": "2.0.6",
+    "core-js": "3.8.1",
+    "element-ui": "2.15.0",
+    "file-saver": "2.0.4",
+    "fuse.js": "6.4.3",
+    "highlight.js": "9.18.5",
+    "js-beautify": "1.13.0",
+    "js-cookie": "2.2.1",
+    "jsencrypt": "3.0.0-rc.1",
+    "nprogress": "0.2.0",
+    "quill": "1.3.7",
+    "screenfull": "5.0.2",
+    "sortablejs": "1.10.2",
+    "vue": "2.6.12",
+    "vue-count-to": "1.0.13",
+    "vue-cropper": "0.5.5",
+    "vue-router": "3.4.9",
+    "vuedraggable": "2.24.3",
+    "vuex": "3.6.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "4.4.6",
+    "@vue/cli-plugin-eslint": "4.4.6",
+    "@vue/cli-service": "4.4.6",
+    "babel-eslint": "10.1.0",
+    "chalk": "4.1.0",
+    "connect": "3.6.6",
+    "eslint": "7.15.0",
+    "eslint-plugin-vue": "7.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "http-proxy-middleware": "^0.19.1",
+    "lint-staged": "10.5.3",
+    "runjs": "4.4.2",
+    "sass": "1.32.0",
+    "sass-loader": "10.1.0",
+    "script-ext-html-webpack-plugin": "2.1.5",
+    "svg-sprite-loader": "5.1.1",
+    "vue-template-compiler": "2.6.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "vue",
+    "admin",
+    "dashboard",
+    "element-ui",
+    "boilerplate",
+    "admin-template"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/mulanbay/mulanbay-template.git"
+  }
+}
